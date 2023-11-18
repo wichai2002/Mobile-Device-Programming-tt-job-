@@ -19,9 +19,26 @@ ___
 - Mysql (database)
 - Firebase
 
+### วิธีติดตั้ง
+1. สร้าง database โดยใช้คำสั่งใน Database/createTable-ttjobDB.sql run บนโปรแกรม Mysql workbench [MySQL Workbench Tutorial](https://www.youtube.com/watch?v=fUK94jOFwBc)
+2. แก้ไขโค้ดในไฟล์ Mobile/ServerMobile/service/connect_database/Database.py <br/>
+```
+host = "Your host";
+user = "Your username";
+password = "Your password";
+database_name = "Your database";
+```
+3. แก้ไขโค้ดในไฟล์ Mobile/ServerMobile/service/public_service.py ให้ใส่ Google API KEY ของคุณ
+```
+api_key = "Your google API key"; # copy your api key => Paste to value at api_key
+```
+5. 
+
 ## USECASE DIAGRAM
 ![image](image_for_README/usecase.png)
 ___
 
 ## Entity Relationship(ER) Diagram
+![image](image_for_README/er.png)
+
 
