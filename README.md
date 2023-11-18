@@ -93,9 +93,13 @@ const firebase = admin.initializeApp({
 }
 ```
 
-9. เปิด Terminal หรือ cmd และเข้าไปที่ไฟล์ Mobile/tt-job ForntEnd-Screen
+9. เปิด Terminal หรือ cmd และเข้าไปที่ไฟล์ Mobile/Screen Mobile
 10. พิมพ์คำสั่ง ```npm install หรือ npm i``` เพื่อติดตั้ง nodemodule ของ Reac-Native และPackage อื่นๆ
-11. เปิด Terminal หรือ cmd และเข้าไปที่ไฟล์ Mobile/tt-job ForntEnd-Screen
+11. เปิด Terminal หรือ cmd และเข้าไปที่ไฟล์ WebApp/Back-End
+12. พิมพ์คำสั่ง ```npm install หรือ npm i``` เพื่อติดตั้ง nodemodule ต่างๆ
+13. เปิดใช้งาน Back-END ของ WEB ด้วยคำสั่ง ``` npm run serve ```
+14. เปิดใช้งาน Back-END ของ Mobile ด้วยคำสั่ง ``` flask --app app.py run –debug ```
+15. เปิดใช้งาน Font-END ของ Mobile ด้วยคำสั่ง ``` npm run start ```
 ## USECASE DIAGRAM
 ![image](image_for_README/usecase.png)
 ___
