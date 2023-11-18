@@ -32,7 +32,7 @@ database_name = "Your database";
 ```
 api_key = "Your google API key"; # copy your api key => Paste to value at api_key
 ```
-4.  แกไขโค้ดในไฟล์
+4.  แกไขโค้ดในไฟล์ Mobile/ServerMobile/service/services/EmployeeService.py โดยให้เพิ่มข้อมูล firebase config [Firebase Storag Tutorial](https://www.youtube.com/watch?v=f388UfOoF4g) <br/> [Get URL of Image in Firebase Storage](https://www.youtube.com/watch?v=53qOv3nuo4c&t=100s)
 ```
 firebaseConfig = {
     'apiKey': "",
