@@ -93,8 +93,9 @@ const firebase = admin.initializeApp({
 }
 ```
 
-9.  
-
+9. เปิด Terminal หรือ cmd และเข้าไปที่ไฟล์ Mobile/tt-job ForntEnd-Screen
+10. พิมพ์คำสั่ง ```npm install หรือ npm i``` เพื่อติดตั้ง nodemodule ของ Reac-Native และPackage อื่นๆ
+11. เปิด Terminal หรือ cmd และเข้าไปที่ไฟล์ Mobile/tt-job ForntEnd-Screen
 ## USECASE DIAGRAM
 ![image](image_for_README/usecase.png)
 ___
