@@ -32,7 +32,26 @@ database_name = "Your database";
 ```
 api_key = "Your google API key"; # copy your api key => Paste to value at api_key
 ```
-5. 
+4.  แกไขโค้ดในไฟล์
+```
+firebaseConfig = {
+    'apiKey': "",
+    'authDomain': "",
+    'projectId': "",
+    'storageBucket': "",
+    'messagingSenderId': "",
+    'appId': "",
+    'measurementId': "",
+    'serviceAccount': 'service/serviceAccount.json',
+    'databaseURL': ""
+}
+
+firebase = pyrebase.initialize_app(firebaseConfig)
+storage = firebase.storage()
+auth = firebase.auth()
+user = auth.sign_in_with_email_and_password('your email', 'your password');
+```
+5.  
 
 ## USECASE DIAGRAM
 ![image](image_for_README/usecase.png)
