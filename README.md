@@ -34,7 +34,7 @@ database_name = "Your database";
 ```
 api_key = "Your google API key"; # copy your api key => Paste to value at api_key
 ```
-5.  แกไขโค้ดในไฟล์ Mobile/ServerMobile/service/services/EmployeeService.py โดยให้เพิ่มข้อมูล firebase config [Firebase Storag Tutorial](https://www.youtube.com/watch?v=f388UfOoF4g) <br/>แก้ไขตัวแปล user เพื่อ sign in รับ url ของรูปภาพ [Get URL of Image in Firebase Storage](https://www.youtube.com/watch?v=53qOv3nuo4c&t=100s)
+5.  แก้ไขโค้ดในไฟล์ Mobile/ServerMobile/service/services/EmployeeService.py โดยให้เพิ่มข้อมูล firebase config [Firebase Storag Tutorial](https://www.youtube.com/watch?v=f388UfOoF4g) <br/>แก้ไขตัวแปล user เพื่อ sign in รับ url ของรูปภาพ [Get URL of Image in Firebase Storage](https://www.youtube.com/watch?v=53qOv3nuo4c&t=100s)
 ```
 firebaseConfig = {
     'apiKey': "",
@@ -69,14 +69,31 @@ user = auth.sign_in_with_email_and_password('your email', 'your password');
     "universe_domain": "googleapis.com"
 }
 ```
-7.  แกไขโค้ในไฟล์ WebApp/Back-End/register/regis.js
+7.  แก้ไขโค้ในไฟล์ WebApp/Back-End/register/regis.js
 ```
 const firebase = admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
     storageBucket: "" // url starageBucket
   });
 ```
-8.  
+8.  แก้ไขโค้ดในไฟล์ WebApp/Back-End/register/mobile-image-com-firebase-adminsdk-1c6sa-d34470338f.json
+```
+{
+  "type": "service_account",
+  "project_id": "",
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "",
+  "client_id": "",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "",
+  "universe_domain": "googleapis.com"
+}
+```
+
+9.  
 
 ## USECASE DIAGRAM
 ![image](image_for_README/usecase.png)
