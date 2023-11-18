@@ -18,3 +18,10 @@ ___
 - Flask Framework (Python)
 - Mysql (database)
 - Firebase
+
+## USECASE DIAGRAM
+![image](image_for_README/usecase.png)
+___
+
+## Entity Relationship(ER) Diagram
+
