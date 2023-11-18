@@ -12,23 +12,24 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
+
+# config firebase
 firebaseConfig = {
-    'apiKey': "AIzaSyDdNgAGWhMVMPmOKJKoczN8BU2Jdg2pCug",
-    'authDomain': "tt-job-upload-image.firebaseapp.com",
-    'projectId': "tt-job-upload-image",
-    'storageBucket': "tt-job-upload-image.appspot.com",
-    'messagingSenderId': "1011629078934",
-    'appId': "1:1011629078934:web:f598a0f1f65b4da67dc5b7",
-    'measurementId': "G-NH9X7T11LT",
+    'apiKey': "",
+    'authDomain': "",
+    'projectId': "",
+    'storageBucket': "",
+    'messagingSenderId': "",
+    'appId': "",
+    'measurementId': "",
     'serviceAccount': 'service/serviceAccount.json',
-    'databaseURL': "https://tt-job-upload-image-default-rtdb.asia-southeast1.firebasedatabase.app/"
+    'databaseURL': ""
 }
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 storage = firebase.storage()
 auth = firebase.auth()
-user = auth.sign_in_with_email_and_password(
-    'wichailoveyou3000@gmail.com', '123456')
+user = auth.sign_in_with_email_and_password('your email', 'your password');
 
 
 class Employees:

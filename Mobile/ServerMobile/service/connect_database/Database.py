@@ -1,11 +1,20 @@
 import mysql.connector ;
 
 def database():
+    """
+        connet your database
+    """
+    
+    host = "Your host";
+    user = "Your username";
+    password = "Your password";
+    database_name = "Your database";
+    
     pool = mysql.connector.connect(
-            host="ttjob-project.ctyetg9uawza.ap-southeast-2.rds.amazonaws.com",
-            user="projectApp1",
-            passwd="vv2-77KPO8c",
-            database="project_db",
+            host=host,
+            user=user,
+            passwd=password,
+            database=database_name,
             auth_plugin='mysql_native_password'
     );
     return pool;
