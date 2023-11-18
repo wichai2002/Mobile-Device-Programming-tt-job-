@@ -1,0 +1,18 @@
+
+function Jobs:
+    1. find all jobs in database -- pass tested
+    2. get job detail --pass tested
+    3. apply job -- pass
+    4. get my job / applyed-doing
+    5. update status applyed Job and cancle 
+    6. evoluation Jobs
+
+function User:
+    1. login -- pass tested
+    2. register
+    3. get user infomation account
+    4. get profile infomation --pass tested
+    5. editing profile
+    6. logout
+    7. message
+
