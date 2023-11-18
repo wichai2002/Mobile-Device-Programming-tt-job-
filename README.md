@@ -19,20 +19,22 @@ ___
 - Mysql (database)
 - Firebase
 
-### วิธีติดตั้ง
-1. สร้าง database โดยใช้คำสั่งใน Database/createTable-ttjobDB.sql run บนโปรแกรม Mysql workbench [MySQL Workbench Tutorial](https://www.youtube.com/watch?v=fUK94jOFwBc)
-2. แก้ไขโค้ดในไฟล์ Mobile/ServerMobile/service/connect_database/Database.py <br/>
+### วิธีติดตั้ง และใช้งานโปรแกรม
+
+1. ติดตั้ง python และ package ที่เกี่ยวข้อง
+2. สร้าง database โดยใช้คำสั่งใน Database/createTable-ttjobDB.sql run บนโปรแกรม Mysql workbench [MySQL Workbench Tutorial](https://www.youtube.com/watch?v=fUK94jOFwBc)
+3. แก้ไขโค้ดในไฟล์ Mobile/ServerMobile/service/connect_database/Database.py <br/>
 ```
 host = "Your host";
 user = "Your username";
 password = "Your password";
 database_name = "Your database";
 ```
-3. แก้ไขโค้ดในไฟล์ Mobile/ServerMobile/service/public_service.py ให้ใส่ Google API KEY ของคุณ
+4. แก้ไขโค้ดในไฟล์ Mobile/ServerMobile/service/public_service.py ให้ใส่ Google API KEY ของคุณ
 ```
 api_key = "Your google API key"; # copy your api key => Paste to value at api_key
 ```
-4.  แกไขโค้ดในไฟล์ Mobile/ServerMobile/service/services/EmployeeService.py โดยให้เพิ่มข้อมูล firebase config [Firebase Storag Tutorial](https://www.youtube.com/watch?v=f388UfOoF4g) <br/> [Get URL of Image in Firebase Storage](https://www.youtube.com/watch?v=53qOv3nuo4c&t=100s)
+5.  แกไขโค้ดในไฟล์ Mobile/ServerMobile/service/services/EmployeeService.py โดยให้เพิ่มข้อมูล firebase config [Firebase Storag Tutorial](https://www.youtube.com/watch?v=f388UfOoF4g) <br/>แก้ไขตัวแปล user เพื่อ sign in รับ url ของรูปภาพ [Get URL of Image in Firebase Storage](https://www.youtube.com/watch?v=53qOv3nuo4c&t=100s)
 ```
 firebaseConfig = {
     'apiKey': "",
@@ -51,7 +53,30 @@ storage = firebase.storage()
 auth = firebase.auth()
 user = auth.sign_in_with_email_and_password('your email', 'your password');
 ```
-5.  
+6.  และแก้ไขโค้ดในไฟล์ Mobile/ServerMobile/service/serviceAccount.json
+```
+{
+    "type": "service_account",
+    "project_id": "",
+    "private_key_id": "",
+    "private_key": "",
+    "client_email": "",
+    "client_id": "",
+    "auth_uri": "",
+    "token_uri": "",
+    "auth_provider_x509_cert_url": "",
+    "client_x509_cert_url": "",
+    "universe_domain": "googleapis.com"
+}
+```
+7.  แกไขโค้ในไฟล์ WebApp/Back-End/register/regis.js
+```
+const firebase = admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    storageBucket: "" // url starageBucket
+  });
+```
+8.  
 
 ## USECASE DIAGRAM
 ![image](image_for_README/usecase.png)
